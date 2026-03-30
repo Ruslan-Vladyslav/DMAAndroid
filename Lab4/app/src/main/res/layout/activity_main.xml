@@ -1,0 +1,160 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginTop="80dp"
+    android:background="@color/bg_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:text="File name"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/textPlaceholder"
+        android:text="Choose video or audio file"
+        android:textColor="#777777"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="#EEEEEE"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/audioLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:text="🎵 Audio"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/textCurrentTime"
+            android:text="00:00"
+            android:textColor="@color/primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="/"
+            android:textColor="@color/primary"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textTotalTime"
+            android:text="00:00"
+            android:textColor="@color/primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:text="Play"
+            android:textColor="@color/text_dark"
+            android:backgroundTint="@color/btn_default"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_margin="6dp"/>
+
+        <Button
+            android:id="@+id/btnPause"
+            android:text="Pause"
+            android:textColor="@color/text_dark"
+            android:backgroundTint="@color/btn_default"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_margin="6dp"/>
+
+        <Button
+            android:id="@+id/btnStop"
+            android:text="Stop"
+            android:textColor="@color/text_dark"
+            android:backgroundTint="@color/btn_default"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_margin="6dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnPick"
+        android:text="Choose file"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/primary"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/editUrl"
+        android:hint="Press to enter URL"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:text="Upload"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/primary"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnFullscreen"
+        android:text="Fullscreen"
+        android:backgroundTint="@color/primary"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"/>
+</LinearLayout>

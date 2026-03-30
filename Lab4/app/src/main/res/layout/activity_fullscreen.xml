@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <VideoView
+        android:id="@+id/videoViewFullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:keepScreenOn="true"/>
+
+    <Button
+        android:id="@+id/btnBackFullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#424242"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/fullscreenControls"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:background="#66000000"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <Button
+            android:id="@+id/btnPlayFullscreen"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:text="Play"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#616161"
+            android:layout_margin="6dp"/>
+
+        <Button
+            android:id="@+id/btnPauseFullscreen"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:text="Pause"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#616161"
+            android:layout_margin="6dp"/>
+
+        <Button
+            android:id="@+id/btnStopFullscreen"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:text="Stop"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#616161"
+            android:layout_margin="6dp"/>
+    </LinearLayout>
+</FrameLayout>
