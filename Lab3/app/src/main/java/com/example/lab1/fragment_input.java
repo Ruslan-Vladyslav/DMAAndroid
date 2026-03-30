@@ -9,6 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
+import android.content.Intent;
 
 public class fragment_input extends Fragment {
 
@@ -64,6 +68,7 @@ public class fragment_input extends Fragment {
                 textError.setVisibility(View.GONE);
 
                 String selected = spinner.getSelectedItem().toString();
+                saveToDB(selected);
 
                 fragment_result resultFragment = new fragment_result();
 
@@ -78,6 +83,26 @@ public class fragment_input extends Fragment {
             }
         });
 
+        Button buttonOpen = view.findViewById(R.id.buttonOpen);
+
+        buttonOpen.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), StorageActivity.class);
+            startActivity(intent);
+        });
+
         return view;
+    }
+
+    private void saveToDB(String text) {
+        Database dbHelper = new Database(getContext());
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("name", text);
+
+        db.insert("languages", null, values);
+        db.close();
+
+        Toast.makeText(getContext(), "Saved successfully!", Toast.LENGTH_SHORT).show();
     }
 }
